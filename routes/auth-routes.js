@@ -12,7 +12,7 @@ router.get('/logout', (req, res) => {
     res.send('logging out');
 });
 
-//auth with google
+//auth with linkedin
 router.get('/linkedin', passport.authenticate('linkedin', {
     scope: ['r_emailaddress', 'r_liteprofile'],
     state: true
