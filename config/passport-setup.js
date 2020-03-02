@@ -9,7 +9,9 @@ passport.use(
     callbackURL:'/auth/linkedin/redirect',
     clientID: keys.linkedin.clientID,
     clientSecret: keys.linkedin.clientSecret
-}, () => {
+}, (acessToken, refreshToken, profile, done) => {
     //passport callback function
+    console.log('passport callback function fired')
+    console.log(profile)
 })
 )

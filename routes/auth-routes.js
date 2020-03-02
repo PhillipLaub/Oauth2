@@ -19,8 +19,7 @@ router.get('/linkedin', passport.authenticate('linkedin', {
 }));
 
 //callback route for linkedin to redirect to
-
-router.get('/linkedin/redirect', (req, res) => {
+router.get('/linkedin/redirect', passport.authenticate('linkedin'),(req, res) => {
     res.send('you reached the callback URI')
 })
 
