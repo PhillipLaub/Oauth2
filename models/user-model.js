@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
     username: String,
     linkedinId: String,
+    thumbnail: String
 })
 
 //create user collection

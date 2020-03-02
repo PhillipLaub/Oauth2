@@ -23,7 +23,7 @@ passport.use(
     clientSecret: keys.linkedin.clientSecret
 }, (accessToken, refreshToken, profile, done) => {
     //check if user already exists in database
-
+    
     User.findOne({linkedinId: profile.id}).then((currentUser) => {
         if (currentUser) {
             //already have the user
